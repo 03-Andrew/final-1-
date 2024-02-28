@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo_container">
+      <h1>Precioso Spa</h1>
+    </div>
+    <nav class="nav_container">
+      <ul class="nav_list">
+        <li><a href="home.html" class="nav_item">Home</a></li>
+        <li><a href="about.html" class="nav_item">About</a></li>
+        <li><a href="services.html" class="nav_item active">Service</a></li>
+        <li><a href="products.html" class="nav_item">Products</a></li>
+        <li><a href="contact.html" class="nav_item last">Contact us</a></li>
+        <li><a href="book.html" class="nav_item_btn">Book now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+      var scrolled = window.scrollY > 50; // Adjust the scroll position as needed
+      header.classList.toggle('scrolled', scrolled);
+    });
+  </script>
+</body>
+
+</html>
+<!-- 

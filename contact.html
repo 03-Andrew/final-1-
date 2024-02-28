@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo_container">
+      <h1>Precioso Spa</h1>
+    </div>
+    <nav class="nav_container">
+      <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><img src="assets/close.svg" alt=""></a></li>
+        <li><a href="home.html" class="nav_item">Home</a></li>
+        <li><a href="about.html" class="nav_item">About</a></li>
+        <li><a href="services.html" class="nav_item">Service</a></li>
+        <li><a href="products.html" class="nav_item">Products</a></li>
+        <li><a href="contact.html" class="nav_item">Contact us</a></li>
+        <li><a href="book.html" class="nav_item">Book now</a></li>
+      </ul>
+      <ul class="nav_list">
+        <li class="hideOnMobile"><a href="home.html" class="nav_item">Home</a></li>
+        <li class="hideOnMobile"><a href="about.html" class="nav_item">About</a></li>
+        <li class="hideOnMobile"><a href="services.html" class="nav_item">Service</a></li>
+        <li class="hideOnMobile"><a href="products.html" class="nav_item">Products</a></li>
+        <li class="hideOnMobile"><a href="contact.html" class="nav_item active last">Contact us</a></li>
+        <li class="hideOnMobile"><a href="book.html" class="nav_item_btn">Book now</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><img src="assets/menu.svg" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="forms">
+    <div class="form_container">
+      <div class="title send">
+        <h1>Send us a message</h1>
+      </div>
+      <div class="sub_text">
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> <a href="">preciosodavao@yahoo.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> 0923-085-7065</li>
+          <li><i class="fa-brands fa-facebook"></i> <a href="">www.facebook.com/preciosofacial</a></li>
+        </ul>
+      </div>
+      <div class="form_message">
+        <p>If you have any questions related to our salon services, appointment or anything else, feel free to reach out
+          and we'll be delighted to help!</p>
+      </div>
+
+
+      <form class="inputs_conatiner" onsubmit="sendEmail(); reset(); return false;">
+        <div class="inputs">
+          <div class="left_side">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Emal">
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phoen Number">
+          </div>
+          <div class="right_side">
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+  <!-- <img class="logo" src="assets/precioso_logo.svg" alt="logo"> -->
+  <section class="location_container">
+    <div class="title">
+      <h1>Our Locations</h1>
+    </div>
+    <div class="map_container">
+      <iframe class="map" src="https://my.atlist.com/map/e2cc8e79-6c43-4382-852c-02157e2a7997?share=true"
+        allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy" frameborder="0"
+        scrolling="no" allowfullscreen></iframe>
+    </div>
+
+    <div class="facades">
+
+      <div class="facade_container">
+        <div class="img_container">
+          <img src="assets/facade1.jpg" alt="">
+        </div>
+        <p>Door 28-A, Gahol Building, Ilustre St., Poblacion District</p>
+      </div>
+
+      <div class="facade_container">
+        <div class="img_container">
+          <img src="assets/facade2.png" alt="">
+        </div>
+        <p>Door 2, Charlotte Dormitel, Roxas Ave, Poblacion District</p>
+      </div>
+
+
+      <div>
+
+  </section>
+  <footer>
+    <div class="Footer_container">
+      <div class="fDiv">
+        <h3>Precioso Salon and Spa</h3>
+        <p>Est 2009</p>
+      </div>
+      <div class="fDiv">
+        <h3>Address</h3>
+        <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
+        <p class="sched">Mon - Sat 9 am to 8 pm</p>
+        <p class="sched">Sun 9 am to 8 pm</p>
+
+        <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
+        <p class="sched">Mon - Sat 10 am to 8 pm</p>
+      </div>
+      <div class="fDiv">
+        <h3>Contacts</h3>
+        <p>082-222-2824</p>
+        <p>0923-085-7065</p>
+        <p>preciosodavao@yahoo.com</p>
+      </div>
+      <div class="fDiv">
+        <h3>Follow us</h3>
+        <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/preciosofacialsalonspa/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy Precioso Salon And Spa</p>
+    </div>
+  </footer>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Emeeail.send({
+        Host: "smtp.gmail.com",
+        Username: "username",
+        Password: "password",
+        To: 'them@website.com',
+        From: "you@isp.com",
+        Subject: "This is the subject",
+        Body: "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+    }
+
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('header');
+      var scrolled = window.scrollY > 50; // Adjust the scroll position as needed
+      header.classList.toggle('scrolled', scrolled);
+    });
+  </script>
+</body>
+
+</html>

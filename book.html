@@ -10,7 +10,7 @@
   <script src="script.js"></script>
 </head>
 
-<body>
+<body class="booking_body">
   <header>
     <div class="logo_container">
       <h1>Precioso Spa</h1>
@@ -36,16 +36,78 @@
       </ul>
     </nav>
   </header>
-
-
-  <script>
-    window.addEventListener('scroll', function () {
-      var header = document.querySelector('header');
-      var scrolled = window.scrollY > 50; // Adjust the scroll position as needed
-      header.classList.toggle('scrolled', scrolled);
-    });
-  </script>
+  <section class="booking">
+    <div class="booking_form_container">
+      <div class="booking_forms">
+        <div class="Booking_title">
+          <h1>SCHEDULE YOUR VISIT</h1>
+        </div>
+        <div class="top">
+          <input type="text" id="name" placeholder="Name">
+          <input type="text" id="contactNumber" placeholder="Contact Number">
+          <input type="email" id="email" placeholder="Email">
+          <select name="branch" id="branch">
+            <option value="" disabled selected>Select branch</option>
+            <option value="Ilustre">Ilustre</option>
+            <option value="Roxas">Roxas</option>
+          </select>
+          <input type="datetime-local" id="datePicker" min="YYYY-MM-DDT08:00" max="YYYY-MM-DDT19:00">
+        </div>
+        <div class="bottom">
+          <div class="addService_container">
+            <label for="services">Select a service:</label>
+            <select id="services" onchange="addToCart()">
+              <option value="Haircut">Haircut</option>
+              <option value="Manicure">Manicure</option>
+              <option value="Pedicure">Pedicure</option>
+              <option value="Massage">Massage</option>
+            </select>
+          </div>
+          <div class="cart">
+            <h2>Cart</h2>
+            <div id="cartItems"></div>
+            <button class="add_to_cart_btn" onclick="clearCart()">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+<footer>
+  <div class="footer-container">
+    <div class="fDiv">
+      <h3>Precioso Salon and Spa</h3>
+      <p>Est 2009</p>
+    </div>
+    <div class="fDiv">
+      <h3>Address</h3>
+      <address>
+        <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
+        <p class="sched">Mon - Sat 9 am to 8 pm</p>
+        <p class="sched">Sun 9 am to 8 pm</p>
+
+        <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
+        <p class="sched">Mon - Sat 10 am to 8 pm</p>
+      </address>
+    </div>
+    <div class="fDiv">
+      <h3>Contacts</h3>
+      <p>082-222-2824</p>
+      <p>0923-085-7065</p>
+      <p>preciosodavao@yahoo.com</p>
+    </div>
+    <div class="fDiv">
+      <h3>Follow us</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/preciosofacialsalonspa/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; Precioso Salon And Spa</p>
+  </div>
+</footer>
 
 </html>
 <!-- 

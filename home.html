@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 </head>
 
 <body class="home">
@@ -49,6 +53,8 @@
         <div class="services_container">
             <div class="title_container">
                 <h1 class="title">What we offer</h1>
+                <p> Whether you're in need of a relaxing massage, a refreshing facial, or a glamorous makeover, our
+                    skilled professionals are dedicated to providing you with the ultimate salon experience</p>
             </div>
             <div class="card_container">
                 <div class="card">
@@ -57,82 +63,138 @@
                         <h3>Spa Services</h3>
                     </div>
                 </div>
-            
+
                 <div class="card">
                     <img src="assets/services/hotstone.jpg" alt="Image 2">
                     <div class="card-content">
                         <h3>relaxation services</h3>
                     </div>
-                </div>        
-                
+                </div>
+
                 <div class="card">
                     <img src="assets/services/facial.jpg" alt="Image 2">
                     <div class="card-content">
                         <h3>Facial Services</h3>
                     </div>
-                </div> 
+                </div>
 
                 <div class="card">
                     <img src="assets/services/microneedling.jpg" alt="Image 2">
                     <div class="card-content">
                         <h3>Scar Treatment</h3>
                     </div>
-                </div> 
+                </div>
 
                 <div class="card">
                     <img src="assets/services/rf face.png" alt="Image 2">
                     <div class="card-content">
                         <h3>Firming and contouring</h3>
                     </div>
-                </div> 
+                </div>
 
                 <div class="card">
                     <img src="assets/services/laser" alt="Image 2">
                     <div class="card-content">
                         <h3>Hair removal</h3>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="button serv">
                 <a href="services.html">See all services</a>
             </div>
         </div>
     </section>
+    <section class="ImgSwiper parallax" style="background-color: antiquewhite;">
+        <div class="title_container white">
+            <h1 class="title white">Our Salon</h1>
+            <p>Our salon is equipped with state-of-the-art tools and equipment to ensure each treatment is performed
+                with precision and
+                care.</p>
+        </div>
+        <div class="img-slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img2.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img3.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img4.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img5.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img6.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/ImgSlider/img8.jpg">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                spaceBetween: 20,
+                speed: 1500,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </section>
     <footer>
         <div class="footer-container">
-          <div class="fDiv">
-            <h3>Precioso Salon and Spa</h3>
-            <p>Est 2009</p>
-          </div>
-          <div class="fDiv">
-            <h3>Address</h3>
-            <address>
-              <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
-              <p class="sched">Mon - Sat 9 am to 8 pm</p>
-              <p class="sched">Sun 9 am to 8 pm</p>
-    
-              <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
-              <p class="sched">Mon - Sat 10 am to 8 pm</p>
-            </address>
-          </div>
-          <div class="fDiv">
-            <h3>Contacts</h3>
-            <p>082-222-2824</p>
-            <p>0923-085-7065</p>
-            <p>preciosodavao@yahoo.com</p>
-          </div>
-          <div class="fDiv">
-            <h3>Follow us</h3>
-            <div class="social-links">
-              <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.instagram.com/preciosofacialsalonspa/"><i class="fa-brands fa-instagram"></i></a>
+            <div class="fDiv">
+                <h3>Precioso Salon and Spa</h3>
+                <p>Est 2009</p>
             </div>
-          </div>
+            <div class="fDiv">
+                <h3>Address</h3>
+                <address>
+                    <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
+                    <p class="sched">Mon - Sat 9 am to 8 pm</p>
+                    <p class="sched">Sun 9 am to 8 pm</p>
+
+                    <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
+                    <p class="sched">Mon - Sat 10 am to 8 pm</p>
+                </address>
+            </div>
+            <div class="fDiv">
+                <h3>Contacts</h3>
+                <p>082-222-2824</p>
+                <p>0923-085-7065</p>
+                <p>preciosodavao@yahoo.com</p>
+            </div>
+            <div class="fDiv">
+                <h3>Follow us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/preciosofacialsalonspa/"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
         <div class="copyright">
-          <p>&copy; Precioso Salon And Spa</p>
+            <p>&copy; Precioso Salon And Spa</p>
         </div>
-      </footer>
+    </footer>
 </body>
 
 </html>

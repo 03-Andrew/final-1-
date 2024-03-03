@@ -11,7 +11,7 @@
   --other_black: #231f20;
   --beige: #ece8d3;
 
-  --font1:  'Brygada 1918', sans-serif;
+  --font1: 'Brygada 1918', sans-serif;
   --font2: 'Roboto', sans-serif;
 }
 
@@ -36,7 +36,8 @@ body {
   background-position: center;
   padding-top: 70px;
 }
-.home{
+
+.home {
   padding: 0;
 }
 
@@ -59,7 +60,7 @@ header {
   z-index: 1000;
 }
 
-.home header{
+.home header {
   background-color: transparent;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
@@ -258,17 +259,17 @@ header.scrolled {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(126, 105, 105, 0.3)), url(assets/spa-therapy.jpg);
   background-size: cover;
   background-position: center;
-  align-items: center; 
-  justify-content: center; 
-  text-align: center; 
-  font-size: 20px; 
-  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+
 }
 
 @media (max-width: 768px) {
   .hero {
-    height: 100vh; 
-    font-size: 18px; 
+    height: 100vh;
+    font-size: 18px;
   }
 }
 
@@ -276,11 +277,13 @@ header.scrolled {
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: left; /* Update this line to left */
+  text-align: left;
+  /* Update this line to left */
   color: #fff;
   padding: 20px;
-  transform: translate(-50%, -50%); /* Add this line to keep the centering effect */
-  
+  transform: translate(-50%, -50%);
+  /* Add this line to keep the centering effect */
+
 }
 
 .top_title h1 {
@@ -299,7 +302,7 @@ header.scrolled {
   margin: 10px 0;
 }
 
-.button{
+.button {
   margin: 30px 0;
 }
 
@@ -316,31 +319,40 @@ header.scrolled {
   color: #fff;
 }
 
-.button a:hover{
+.button a:hover {
   border: 1px solid;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
-  text-shadow: 1px 1px 2px var(--other_yellow); 
+  text-shadow: 1px 1px 2px var(--other_yellow);
 }
 
 .serv {
   text-align: center;
   margin-top: 20px;
 }
-.serv a{
+
+.serv a {
   font-size: 1.2em;
   color: var(--other_yellow);
   outline-color: var(--custom-gradient);
 }
 
-.serv a:hover{
-  text-shadow: 1px 1px 2px white; 
+.serv a:hover {
+  text-shadow: 1px 1px 2px white;
 }
 
 .title_container {
   text-align: center;
-  margin: 30px 0;
+  margin: 30px auto;
+  /* Center the container horizontally */
+  max-width: 900px;
+  /* Set a maximum width */
+}
+
+.title_container p {
+  color: var(--yellow);
+  margin-top: 20px;
 }
 
 .title {
@@ -352,21 +364,69 @@ header.scrolled {
   display: inline-block;
   padding-bottom: 10px;
   background-clip: text;
-  background-image: var(--custom-gradient); /* Adjust the gradient colors as needed */
+  background-image: var(--custom-gradient);
+  /* Adjust the gradient colors as needed */
 }
 
 .title::after {
   content: "";
   position: absolute;
-  width: 80px;
+  width: calc(100% - 40px);
+  /* Adjust the width */
   height: 2px;
-  background: var(--custom-gradient); /* Adjust the color as needed */
+  background: var(--custom-gradient);
+  /* Adjust the color as needed */
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.title_container.white p {
+  font-size: 18px;
+  /* Add space between title and paragraph */
+  color: #3a3a3a;
+}
 
+.title_container.white h1 {
+  color: #3a3a3a;
+}
+
+.title.white::after {
+  background: #3a3a3a;
+}
+
+
+.ImgSwiper {
+  padding-top: 5px;
+  background: linear-gradient(rgba(245, 245, 220, 0.5), rgba(245, 245, 220, 0.5));
+  background-size: cover;
+  /* Ensure the background image covers the entire element */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Prevent the background image from repeating */
+}
+
+.img-slider {
+  width: 100%;
+  height: 80%;
+  padding: 0 0 20px 0;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*--------------------------------------*/
 
 
 
@@ -386,18 +446,21 @@ header.scrolled {
 .card_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Adjusted to space between the cards */
+  justify-content: space-between;
+  /* Adjusted to space between the cards */
 }
 
 .card {
-  width: calc(33.33% - 40px); /* Adjusted width to fit three cards per row with spacing */
+  width: calc(33.33% - 40px);
+  /* Adjusted width to fit three cards per row with spacing */
   margin: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  box-sizing: border-box; /* Added to include padding in width calculation */
+  box-sizing: border-box;
+  /* Added to include padding in width calculation */
 }
 
 .card:hover {
@@ -406,8 +469,10 @@ header.scrolled {
 
 .card img {
   width: 100%;
-  height: 200px; /* Adjusted height as per your requirement */
-  object-fit: cover; /* Added to maintain aspect ratio and cover the container */
+  height: 200px;
+  /* Adjusted height as per your requirement */
+  object-fit: cover;
+  /* Added to maintain aspect ratio and cover the container */
   border-bottom: 1px solid #ddd;
 }
 
@@ -462,7 +527,8 @@ header.scrolled {
   background-color: #f3f3f3;
   height: 0;
   overflow: hidden;
-  transition: height 0.5s ease; /* Adjust the duration (0.5s) and easing function as needed */
+  transition: height 0.5s ease;
+  /* Adjust the duration (0.5s) and easing function as needed */
   overflow-y: auto;
 }
 
@@ -490,7 +556,7 @@ header.scrolled {
 }
 
 /* Contact Us forms */
-.sub_text{
+.sub_text {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -498,25 +564,28 @@ header.scrolled {
   text-align: center;
 }
 
-.form_message{
+.form_message {
   text-align: center;
   max-width: 600px;
   margin: 10px auto;
 }
 
-.sub_text ul{
+.sub_text ul {
   display: flex;
   border-bottom: #C99950 1px solid;
   border-top: #C99950 1px solid;
 }
-.sub_text li{
+
+.sub_text li {
   list-style: none;
   margin: 5px;
-  a{
+
+  a {
     color: #3a3a3a;
   }
 }
-.sub_text i{
+
+.sub_text i {
   color: var(--yellow);
 }
 
@@ -524,51 +593,56 @@ header.scrolled {
 form {
   display: flex;
   flex-direction: column;
-  max-width: 800px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 800px;
+  /* Adjust the max-width as needed */
+  margin: 0 auto;
+  /* Center the form horizontally */
 }
 
 .inputs {
   display: flex;
-  justify-content: space-between;
   gap: 10px;
 }
 
 .left_side,
 .right_side {
-  flex: 1; /* Equal width for both sides */
-  height: 190px;
+  flex: 2;
+  height: 170px;
 }
 
 .left_side input,
 .right_side textarea {
-  width: 100%; /* Make input fields and textarea fill the available width */
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
+  margin: 5px;
 }
-textarea{
-  height: 75%;
+
+textarea {
+  height: 86%;
 }
-button {
-  width: 100%; /* Button takes full width */
+
+.btn {
+  width: 20%;
   padding: 10px;
-  background: var(--custom-gradient); /* Button color */
-  color: white; /* Text color */
+  background: var(--custom-gradient);
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s;
+  margin: 0 auto;
 }
 
-button:hover {
-  /* Button color on hover */
+.btn:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 /* Contact Us - Facades*/
 
 
-.location_container{
-  margin-top: 20px;  
+.location_container {
+  margin-top: 20px;
 }
 
 .facades {
@@ -655,6 +729,104 @@ button:hover {
 
 }
 
+/*_________________________________________________BOOK NOW__________________________________________________________*/
+
+.booking_body {
+  background: url(assets/stonespa.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  header {
+    background-color: transparent;
+  }
+
+  header.scrolled {
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .Booking_title h1 {
+    margin: 5px 0;
+    font-size: 42px;
+    color: var(--other_yellow);
+  }
+}
+
+.booking_forms {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 30px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  padding: 30px;
+  /* Semi-transparent white background */
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.booking_forms input,
+.booking_forms select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+
+.addService_container {
+  margin-bottom: 20px;
+}
+
+.cart {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  color: var(--other_yellow);
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.add_to_cart_btn {
+  padding: 10px 20px;
+  background: var(--custom-gradient);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*_________________________________________________FOOTER_______________________________________________________-----*/
 

@@ -78,7 +78,7 @@ function sendMail() {
     phoneNumber: document.getElementById("phoneNumber").value,
     message: document.getElementById("message").value
   }
-  const serviceID = "service_ofgus2j";
+  const serviceID = "service_goxdids";
   const templateID = "template_iea0qli";
 
   emailjs.send(serviceID, templateID, params)

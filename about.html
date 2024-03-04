@@ -8,9 +8,85 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <style>
+    body.about{
+      background: linear-gradient(to bottom, seashell, #fff); /* Replace with your desired colors */
+    }
+    section {
+      padding: 50px 0;
+      text-align: center;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: row; /* Change flex direction to row */
+      align-items: center;
+      width: 100%;
+      height: 60vh; /* Adjust this value to cover more or less of the screen */
+      background-image: url("assets/ImgSlider/img1.jpg"); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+      margin-top: -100px;
+    }
+
+    .about-content {
+      text-align: left;
+      width: 50%; /* Take up 50% of the width */
+      padding: 50px; /* Add padding for spacing */
+      background-color: rgba(255, 255, 255, 0.9);
+      height: 60vh; 
+      border-radius: 50px 0 0 50px; /* Semi-transparent white background */
+    }
+
+    .about-section:hover {
+      transform: scale(1.05); /* Increase size on hover */
+    }
+
+    .about-content h1.title {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #333;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      .about-section {
+        flex-direction: column; /* Change back to column on smaller screens */
+      }
+
+      .about-content {
+        width: 100%; /* Take up full width on smaller screens */
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="about">
   <header>
     <div class="logo_container">
       <h1>Precioso Spa</h1>
@@ -37,14 +113,57 @@
     </nav>
   </header>
 
+  
+  <section>
+    <div class="container">
+        <div class="about-section">
+          <div class="image"></div>
+          <div class="about-content">
+              <h1 class="title">About Us</h1>
+              <p>Welcome to Precioso Spa and Salon, where our 15-year journey in beauty and wellness began with essential services like massages and skincare. 
+                Evolving with industry trends, we seamlessly blend modern techniques, advanced machines, and personalized treatments to offer a unique and indulgent experience. 
+                Whether you seek the tranquility of a classic massage or the transformative results of advanced treatments, our dedicated professionals ensure you leave feeling refreshed,
+                renewed, and absolutely Precioso.</p>
+            </div>
+      </div>
+    </div>
+</section>
+<footer>
+  <div class="footer-container">
+      <div class="fDiv">
+          <h3>Precioso Salon and Spa</h3>
+          <p>Est 2009</p>
+      </div>
+      <div class="fDiv">
+          <h3>Address</h3>
+          <address>
+              <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
+              <p class="sched">Mon - Sat 9 am to 8 pm</p>
+              <p class="sched">Sun 9 am to 8 pm</p>
 
-  <script>
-    window.addEventListener('scroll', function () {
-      var header = document.querySelector('header');
-      var scrolled = window.scrollY > 50; // Adjust the scroll position as needed
-      header.classList.toggle('scrolled', scrolled);
-    });
-  </script>
+              <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
+              <p class="sched">Mon - Sat 10 am to 8 pm</p>
+          </address>
+      </div>
+      <div class="fDiv">
+          <h3>Contacts</h3>
+          <p>082-222-2824</p>
+          <p>0923-085-7065</p>
+          <p>preciosodavao@yahoo.com</p>
+      </div>
+      <div class="fDiv">
+          <h3>Follow us</h3>
+          <div class="social-links">
+              <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/preciosofacialsalonspa/"><i
+                      class="fa-brands fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+  <div class="copyright">
+      <p>&copy; Precioso Salon And Spa</p>
+  </div>
+</footer>
 </body>
 
 </html>

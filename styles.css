@@ -278,11 +278,9 @@ header.scrolled {
   top: 50%;
   left: 50%;
   text-align: left;
-  /* Update this line to left */
   color: #fff;
   padding: 20px;
   transform: translate(-50%, -50%);
-  /* Add this line to keep the centering effect */
 
 }
 
@@ -345,9 +343,7 @@ header.scrolled {
 .title_container {
   text-align: center;
   margin: 30px auto;
-  /* Center the container horizontally */
   max-width: 900px;
-  /* Set a maximum width */
 }
 
 .title_container p {
@@ -365,17 +361,14 @@ header.scrolled {
   padding-bottom: 10px;
   background-clip: text;
   background-image: var(--custom-gradient);
-  /* Adjust the gradient colors as needed */
 }
 
 .title::after {
   content: "";
   position: absolute;
   width: calc(100% - 40px);
-  /* Adjust the width */
   height: 2px;
   background: var(--custom-gradient);
-  /* Adjust the color as needed */
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -383,7 +376,6 @@ header.scrolled {
 
 .title_container.white p {
   font-size: 18px;
-  /* Add space between title and paragraph */
   color: #3a3a3a;
 }
 
@@ -398,13 +390,9 @@ header.scrolled {
 
 .ImgSwiper {
   padding-top: 5px;
-  background: linear-gradient(rgba(245, 245, 220, 0.5), rgba(245, 245, 220, 0.5));
-  background-size: cover;
-  /* Ensure the background image covers the entire element */
+    background-size: cover;
   background-position: center;
-  /* Center the background image */
   background-repeat: no-repeat;
-  /* Prevent the background image from repeating */
 }
 
 .img-slider {
@@ -425,7 +413,25 @@ header.scrolled {
     object-fit: cover;
   }
 }
+@media screen and (max-width: 768px) {
+  .img-slider {
+    height: 60%; /* Adjust height for smaller screens */
+  }
 
+  .swiper-slide {
+    min-width: 50%; /* Make sure two slides are visible on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-slider {
+    height: 40%; /* Further adjust height for even smaller screens */
+  }
+
+  .swiper-slide {
+    min-width: 100%; /* Make one slide visible on the smallest screens */
+  }
+}
 /*--------------------------------------*/
 
 
@@ -542,6 +548,8 @@ header.scrolled {
 
 /* _____________________________________________Contact Us ___________________________________________________________________*/
 
+/* Default styles */
+
 .send {
   text-align: center;
   margin-top: 20px;
@@ -552,16 +560,13 @@ header.scrolled {
   color: var(--other_yellow);
   text-transform: uppercase;
   letter-spacing: 2px;
-
 }
 
-/* Contact Us forms */
 .sub_text {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
 .form_message {
@@ -589,25 +594,23 @@ header.scrolled {
   color: var(--yellow);
 }
 
-
 form {
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  /* Adjust the max-width as needed */
   margin: 0 auto;
-  /* Center the form horizontally */
 }
 
 .inputs {
   display: flex;
+  flex-wrap: wrap; /* Allow inputs to wrap to the next line on smaller screens */
   gap: 10px;
 }
 
 .left_side,
 .right_side {
   flex: 2;
-  height: 170px;
+  min-width: 0; /* Allow flex items to shrink below their content's width */
 }
 
 .left_side input,
@@ -623,7 +626,8 @@ textarea {
 }
 
 .btn {
-  width: 20%;
+  width: 100%;
+  max-width: 200px; 
   padding: 10px;
   background: var(--custom-gradient);
   color: white;
@@ -636,11 +640,37 @@ textarea {
 
 .btn:hover {
   box-shadow: 0 0 10px var(--yellow);
-
   transform: scale(1.1);
 }
 
-/* Contact Us - Facades*/
+
+@media screen and (max-width: 780px) {
+  .inputs {
+    flex-direction: column; 
+  }
+
+  .btn {
+    width: 100%; /* Take full width on smaller screens */
+    max-width: none; /* Remove the max-width on the button */
+  }
+  .send h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .sub_text ul {
+    flex-direction: column; /* Stack list items vertically on smaller screens */
+  }
+
+  .sub_text li {
+    margin: 5px 0; /* Adjust margin for list items on smaller screens */
+  }
+
+  .form_message {
+    max-width: 100%; /* Make the message take full width on smaller screens */
+  }
+}
+
+
 
 
 .location_container {

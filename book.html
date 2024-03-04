@@ -67,10 +67,32 @@
             <label for="services">Select a service:</label>
             <select id="services" onchange="addToCart()">
               <option value="" disabled selected>Select Service</option>
-              <option value="Haircut">Haircut</option>
-              <option value="Manicure">Manicure</option>
-              <option value="Pedicure">Pedicure</option>
-              <option value="Massage">Massage</option>
+              <optgroup label="Spa Service">
+                <option value="Body Scrub">Body Scrub</option>
+                <option value="Bleaching">Bleaching</option>
+                <option value="Moroccan Bath">Moroccan Bath</option>
+                <option value="Manicure">Manicure</option>
+                <option value="Pedicure">Pedicure</option>
+                <option value="Foot Spa">Foot Spa</option>
+                <option value="Hand Paraffin">Hand Paraffin</option>
+                <option value="Foot Paraffin">Foot Paraffin</option>
+                <option value="Gel Polish">Gel Polish</option>
+                <option value="Nail Extension">Nail Extension</option>
+                <option value="Nail Arts">Nail Arts</option>
+              </optgroup>
+              <optgroup label="Relaxation Services">
+                <option value="Body Massage">Body Massage</option>
+                <option value="Theraputic Massage">Theraputic Massage</option>
+                <option value="Ventosa">Ventosa</option>
+                <option value="Hot Stone">Hot Stone</option>
+                <option value="Sauna">Sauna</option>
+              </optgroup>
+              <optgroup label="Hair Removal">
+                <option value="Permanent Hair Removal">Permanenet Hair removal</option>
+                <option value="Threading">Threading</option>
+                <option value="Waxig">Waxing</option>
+              </optgroup>
+
             </select>
           </div>
           <div class="cart">

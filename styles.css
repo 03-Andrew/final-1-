@@ -390,7 +390,7 @@ header.scrolled {
 
 .ImgSwiper {
   padding-top: 5px;
-    background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -413,25 +413,31 @@ header.scrolled {
     object-fit: cover;
   }
 }
+
 @media screen and (max-width: 768px) {
   .img-slider {
-    height: 60%; /* Adjust height for smaller screens */
+    height: 60%;
+    /* Adjust height for smaller screens */
   }
 
   .swiper-slide {
-    min-width: 50%; /* Make sure two slides are visible on smaller screens */
+    min-width: 50%;
+    /* Make sure two slides are visible on smaller screens */
   }
 }
 
 @media screen and (max-width: 480px) {
   .img-slider {
-    height: 40%; /* Further adjust height for even smaller screens */
+    height: 40%;
+    /* Further adjust height for even smaller screens */
   }
 
   .swiper-slide {
-    min-width: 100%; /* Make one slide visible on the smallest screens */
+    min-width: 100%;
+    /* Make one slide visible on the smallest screens */
   }
 }
+
 /*--------------------------------------*/
 
 
@@ -453,7 +459,9 @@ header.scrolled {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* Adjusted to space between the cards */
+  max-width: 90vw;
+  margin: 0 auto
+    /* Adjusted to space between the cards */
 }
 
 .card {
@@ -503,52 +511,26 @@ header.scrolled {
 }
 
 /*_______________________________________________Services_____________________________________________________________________*/
+.accordion {
+  margin-top: 20px;
+  text-align: center;
+}
 
-
-
-.accodion-item {
+.a_title h1 {
+  font-size: 36px;
+  color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
   position: relative;
-  margin: 10px 20px;
-}
-
-.accordion-header {
-  position: relative;
-  padding: 10px;
-  background: beige;
+  display: inline-block;
+  padding-bottom: 10px;
+  background-clip: text;
+  background-image: var(--custom-gradient);
 
 }
-
-.accordion-header::before {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1.5em;
-
-}
-
-.accordion-content {
-  position: relative;
-  background-color: #f3f3f3;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.5s ease;
-  /* Adjust the duration (0.5s) and easing function as needed */
-  overflow-y: auto;
-}
-
-.accordion-item.active .accordion-content,
-.accordion-header {
-  height: auto;
-  padding: 10px;
-  color: #333;
-}
-
 
 /* _____________________________________________Contact Us ___________________________________________________________________*/
 
-/* Default styles */
 
 .send {
   text-align: center;
@@ -603,14 +585,16 @@ form {
 
 .inputs {
   display: flex;
-  flex-wrap: wrap; /* Allow inputs to wrap to the next line on smaller screens */
+  flex-wrap: wrap;
+  /* Allow inputs to wrap to the next line on smaller screens */
   gap: 10px;
 }
 
 .left_side,
 .right_side {
   flex: 2;
-  min-width: 0; /* Allow flex items to shrink below their content's width */
+  min-width: 0;
+  /* Allow flex items to shrink below their content's width */
 }
 
 .left_side input,
@@ -627,7 +611,7 @@ textarea {
 
 .btn {
   width: 100%;
-  max-width: 200px; 
+  max-width: 200px;
   padding: 10px;
   background: var(--custom-gradient);
   color: white;
@@ -646,27 +630,34 @@ textarea {
 
 @media screen and (max-width: 780px) {
   .inputs {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .btn {
-    width: 100%; /* Take full width on smaller screens */
-    max-width: none; /* Remove the max-width on the button */
+    width: 100%;
+    /* Take full width on smaller screens */
+    max-width: none;
+    /* Remove the max-width on the button */
   }
+
   .send h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px;
+    /* Adjust font size for smaller screens */
   }
 
   .sub_text ul {
-    flex-direction: column; /* Stack list items vertically on smaller screens */
+    flex-direction: column;
+    /* Stack list items vertically on smaller screens */
   }
 
   .sub_text li {
-    margin: 5px 0; /* Adjust margin for list items on smaller screens */
+    margin: 5px 0;
+    /* Adjust margin for list items on smaller screens */
   }
 
   .form_message {
-    max-width: 100%; /* Make the message take full width on smaller screens */
+    max-width: 100%;
+    /* Make the message take full width on smaller screens */
   }
 }
 
@@ -877,8 +868,8 @@ textarea {
 /*_________________________________________________FOOTER_______________________________________________________-----*/
 
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #3333331b;
+  color: #333;
   padding: 30px 0;
 }
 
@@ -916,7 +907,7 @@ p {
 }
 
 .social-links a {
-  color: #fff;
+  color: #333;
   margin-right: 10px;
   font-size: 1.5em;
 }

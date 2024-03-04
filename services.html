@@ -7,7 +7,88 @@
   <title>Contact</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="dist/accordion.min.css">
+  <script src="dist/accordion.min.js"></script>
   <script src="script.js"></script>
+  <style>
+    h2 {
+      color: #282F35;
+      font-family: 'Josefin Sans', Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    .acc {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .acc li {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .acc_ctrl {
+      background: #fffffd;
+      border: none;
+      cursor: pointer;
+      display: block;
+      outline: none;
+      padding: 2em;
+      position: relative;
+      text-align: center;
+      width: 95%;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      border-radius: 20px;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .acc_ctrl:hover {
+      background: #e6e6e6;
+    }
+
+    .acc_ctrl.active h2,
+    .acc_ctrl:focus h2 {
+      position: relative;
+    }
+
+    .acc_panel {
+      background: transparent;
+      display: none;
+      overflow: hidden;
+    }
+
+    .acc_panel.active {
+      display: block;
+      animation: fadein 0.5s;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    body {
+      background: linear-gradient(to bottom, rgb(251, 246, 242), #fff);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -36,114 +117,594 @@
       </ul>
     </nav>
   </header>
-  <section>
-    <div class="title">
+  <section class="accordion">
+    <div class="title" style="margin-bottom: 10px;">
       <h1>What we offer</h1>
     </div>
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-header">Spa Services</div>
-        <div class="accordion-content">
-          <div class="services_container">
-            <div class="title_container">
-                <h1 class="title">What we offer</h1>
-            </div>
+    <div class="container">
+      <ul class="acc">
+        <li>
+          <button class="acc_ctrl">
+            <h2>Spa Services</h2>
+          </button>
+          <div class="acc_panel">
             <div class="card_container">
-                <div class="card">
-                    <img src="assets/services/manicure.jpg" alt="Image 1">
-                    <div class="card-content">
-                        <h3>Spa Services</h3>
-                    </div>
+              <div class="card">
+                <img src="assets/services/bodyScrub.jpg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Body Scrub</h3>
+                  <p>Revitalize your skin with our premium spa body scrub, leaving you with a radiant, silky-smooth
+                    glow</p>
+
                 </div>
-            
-                <div class="card">
-                    <img src="assets/services/hotstone.jpg" alt="Image 2">
-                    <div class="card-content">
-                        <h3>relaxation services</h3>
-                    </div>
-                </div>        
-                
-                <div class="card">
-                    <img src="assets/services/facial.jpg" alt="Image 2">
-                    <div class="card-content">
-                        <h3>Facial Services</h3>
-                    </div>
-                </div> 
+              </div>
 
-                <div class="card">
-                    <img src="assets/services/microneedling.jpg" alt="Image 2">
-                    <div class="card-content">
-                        <h3>Scar Treatment</h3>
-                    </div>
-                </div> 
+              <div class="card">
+                <img src="assets/ServicesPage/Bleaching.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>Bleaching</h3>
+                  <p>Transform your skin with our expertly formulated bleaching treatment, unveiling a luminous
+                    complexion with every
+                    application.</p>
+                </div>
+              </div>
 
-                <div class="card">
-                    <img src="assets/services/rf face.png" alt="Image 2">
-                    <div class="card-content">
-                        <h3>Firming and contouring</h3>
-                    </div>
-                </div> 
+              <div class="card">
+                <img src="assets/ServicesPage/moroccan.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Moroccan Bath</h3>
+                  <p>Experience the timeless tradition of our Moroccan bath—a centuries-old cleaning ritual that softens
+                    the skin while
+                    relaxing tired muscles.</p>
+                </div>
+              </div>
 
-                <div class="card">
-                    <img src="assets/services/laser" alt="Image 2">
-                    <div class="card-content">
-                        <h3>Hair removal</h3>
-                    </div>
-                </div> 
+              <div class="card">
+                <img src="assets/services/manicure.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Manicure and Pedicure</h3>
+                  <p>Pamper yourself with our deluxe manicure and pedicure, leaving your hands and feet impeccably
+                    groomed and refreshed.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/footspa1.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Foot Spa</h3>
+                  <p>Revitalize your feet with our soothing foot spa, ensuring relaxation and rejuvenation with every
+                    soak.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handParaddin.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Foot and Hand Paraffin</h3>
+                  <p>Indulge in the luxurious comfort of our wax treatment, ensuring velvety-smooth skin and
+                    unparalleled hydration.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handGel.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Gel Polish</h3>
+                  <p>Elevate your nails with our gel polish treatment, boasting long-lasting shine and vibrant color</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handNail.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Nail Extension & Nail art</h3>
+                  <p>Transform your nails with our exquisite nail extension and art services, showcasing personalized
+                    designs</p>
+                </div>
+              </div>
+
             </div>
-        </div>
-        </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Relaxation Services</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/massage.jpg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Body Massage</h3>
+                  <p>Surrender to pure relaxation with our rejuvenating body massage, melting away tension and restoring
+                    balance</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/theraputic.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Therapeutic Massage</h3>
+                  <p>TExperience profound relief and healing, expertly tailored to alleviate discomfort and
+                    promote holistic well-being.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/ventiosa.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Ventiosa</h3>
+                  <p>Revitalize your body with our Ventosa therapy, harnessing the power of suction to promote
+                    circulation and release
+                    tension</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/hotstone.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Hot Stone</h3>
+                  <p>Unwind with our hot stone therapy, where smooth, heated stones melt away tension, leaving you
+                    relaxed and
+                    rejuvenated./p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/sauna.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Sauna</h3>
+                  <p>Revitalize in our sauna, a serene retreat where warmth melts away stress, leaving you refreshed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Pigmentation Therapy</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/laser.webp" alt="Image 1">
+                <div class="card-content">
+                  <h3>Carbon Laser</h3>
+                  <p>Transform your skin with our carbon laser therapy, erasing imperfections for a radiant complexion.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/ipl.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Intense Pulsed light (IPL)</h3>
+                  <p>Revitalize your skin with IPL treatment, targeting sun damage, acne, and imperfections for a
+                    radiant complexion.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/pico.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Pico Laser</h3>
+                  <p>Revitalize your body with our Ventosa therapy, harnessing the power of suction to promote
+                    circulation and release
+                    tension</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Facial</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/FacialCleaning.jpeg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Facial cleaning</h3>
+                  <p>Renew your skin with our facial cleansing treatment, restoring a fresh, radiant complexion with
+                    gentle yet effective
+                    techniques.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/pimple.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>Pimple Treatment</h3>
+                  <p>Combat pesky pimples with our targeted treatment, swiftly clearing blemishes for clearer,
+                    healthier-looking skin</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/diamonPeel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Diamond Peel</h3>
+                  <p>Experience radiant skin with our diamond peel treatment, gently exfoliating away impurities for a
+                    smoother, brighter
+                    complexion.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/peel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Chemical Peel</h3>
+                  <p>Achieve luminous skin with our chemical peel treatment, which effectively eliminates impurities to
+                    unveil a smoother,
+                    brighter complexion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Firming And Contouring</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/services/rf face.png" alt="Image 1">
+                <div class="card-content">
+                  <h3>RF body and face</h3>
+                  <p>Revitalize both face and body with our RF treatment, harnessing radiofrequency technology to
+                    tighten skin and enhance
+                    overall firmness and tone.</p>
+
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/Bleaching.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>Bleaching</h3>
+                  <p>Transform your skin with our expertly formulated bleaching treatment, unveiling a luminous
+                    complexion with every
+                    application.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/moroccan.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Moroccan Bath</h3>
+                  <p>Experience the timeless tradition of our Moroccan bath—a centuries-old cleaning ritual that softens
+                    the skin while
+                    relaxing tired muscles.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/manicure.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Manicure and Pedicure</h3>
+                  <p>Pamper yourself with our deluxe manicure and pedicure, leaving your hands and feet impeccably
+                    groomed and refreshed.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/footspa1.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Foot Spa</h3>
+                  <p>Revitalize your feet with our soothing foot spa, ensuring relaxation and rejuvenation with every
+                    soak.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handParaddin.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Foot and Hand Paraffin</h3>
+                  <p>Indulge in the luxurious comfort of our wax treatment, ensuring velvety-smooth skin and
+                    unparalleled hydration.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handGel.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Gel Polish</h3>
+                  <p>Elevate your nails with our gel polish treatment, boasting long-lasting shine and vibrant color</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/handNail.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Nail Extension & Nail art</h3>
+                  <p>Transform your nails with our exquisite nail extension and art services, showcasing personalized
+                    designs</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Scar treatment</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/FacialCleaning.jpeg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Derma Pen</h3>
+                  <p>Renew your skin with our facial cleansing treatment, restoring a fresh, radiant complexion with
+                    gentle yet effective
+                    techniques.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/pimple.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>RF microneedling</h3>
+                  <p>Combat pesky pimples with our targeted treatment, swiftly clearing blemishes for clearer,
+                    healthier-looking skin</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/diamonPeel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>CO2 Laser</h3>
+                  <p>Experience radiant skin with our diamond peel treatment, gently exfoliating away impurities for a
+                    smoother, brighter
+                    complexion.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/peel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Chemical Peel</h3>
+                  <p>Achieve luminous skin with our chemical peel treatment, which effectively eliminates impurities to
+                    unveil a smoother,
+                    brighter complexion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Acne Treatment</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/services/manicure.jpg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Pimple Extraction</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/hotstone.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Pimple Injection</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/facial.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Aha Treatment</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/microneedling.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Ace Laser</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/rf face.png" alt="Image 2">
+                <div class="card-content">
+                  <h3>PDT Light</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Hair Removal</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/FacialCleaning.jpeg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Permanent Hair Removal</h3>
+                  <p>Renew your skin with our facial cleansing treatment, restoring a fresh, radiant complexion with
+                    gentle yet effective
+                    techniques.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/pimple.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>Threading</h3>
+                  <p>Combat pesky pimples with our targeted treatment, swiftly clearing blemishes for clearer,
+                    healthier-looking skin</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/diamonPeel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Waxing</h3>
+                  <p>Experience radiant skin with our diamond peel treatment, gently exfoliating away impurities for a
+                    smoother, brighter
+                    complexion.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/peel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Chemical Peel</h3>
+                  <p>Achieve luminous skin with our chemical peel treatment, which effectively eliminates impurities to
+                    unveil a smoother,
+                    brighter complexion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Other services</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/ServicesPage/FacialCleaning.jpeg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Warts Removal</h3>
+                  <p>Renew your skin with our facial cleansing treatment, restoring a fresh, radiant complexion with
+                    gentle yet effective
+                    techniques.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/pimple.webp" alt="Image 2">
+                <div class="card-content">
+                  <h3>Skin Tag Removal</h3>
+                  <p>Combat pesky pimples with our targeted treatment, swiftly clearing blemishes for clearer,
+                    healthier-looking skin</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/diamonPeel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Syringoma Removal</h3>
+                  <p>Experience radiant skin with our diamond peel treatment, gently exfoliating away impurities for a
+                    smoother, brighter
+                    complexion.</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/ServicesPage/peel.jpeg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Melia Removal</h3>
+                  <p>Achieve luminous skin with our chemical peel treatment, which effectively eliminates impurities to
+                    unveil a smoother,
+                    brighter complexion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="acc_ctrl">
+            <h2>Tatoo Removal</h2>
+          </button>
+          <div class="acc_panel">
+            <div class="card_container">
+              <div class="card">
+                <img src="assets/services/manicure.jpg" alt="Image 1">
+                <div class="card-content">
+                  <h3>Spa Services</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/hotstone.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Eyebrow Tatoo Wash</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/facial.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Eyebrow Tatoo Removal</h3>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="assets/services/microneedling.jpg" alt="Image 2">
+                <div class="card-content">
+                  <h3>Body Tatoo removal</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $('.acc_ctrl').on('click', function (e) {
+          e.preventDefault();
+          var $this = $(this);
+          var $panel = $this.next('.acc_panel');
+          if ($this.hasClass('active')) {
+            $this.removeClass('active');
+            $panel.stop().slideUp(300);
+          } else {
+            $('.acc_ctrl').removeClass('active');
+            $('.acc_panel').slideUp(300);
+            $this.addClass('active');
+            $panel.stop().slideDown(300);
+          }
+        });
+      });
+    </script>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="fDiv">
+        <h3>Precioso Salon and Spa</h3>
+        <p>Est 2009</p>
       </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 2</div>
-        <div class="accordion-content">
-          <p>Content for Section 2</p>
-        </div>
+      <div class="fDiv">
+        <h3>Address</h3>
+        <address>
+          <p class="address">Door 28-A, Gahol Building, Ilustre St, Poblacion District</p>
+          <p class="sched">Mon - Sat 9 am to 8 pm</p>
+          <p class="sched">Sun 9 am to 8 pm</p>
+
+          <p class="address">Door 2, CHARLOTTE DORMITEL, Roxas Ave, Poblacion District</p>
+          <p class="sched">Mon - Sat 10 am to 8 pm</p>
+        </address>
       </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 3</div>
-        <div class="accordion-content">
-          <p>Content for Section 3</p>
-        </div>
+      <div class="fDiv">
+        <h3>Contacts</h3>
+        <p>082-222-2824</p>
+        <p>0923-085-7065</p>
+        <p>preciosodavao@yahoo.com</p>
       </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 1</div>
-        <div class="accordion-content">
-          <p>Content for Section 1</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 2</div>
-        <div class="accordion-content">
-          <p>Content for Section 2</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 3</div>
-        <div class="accordion-content">
-          <p>Content for Section 3</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 1</div>
-        <div class="accordion-content">
-          <p>Content for Section 1</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 2</div>
-        <div class="accordion-content">
-          <p>Content for Section 2</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">Section 3</div>
-        <div class="accordion-content">
-          <p>Content for Section 3</p>
+      <div class="fDiv">
+        <h3>Follow us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/preciosofacial"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/preciosofacialsalonspa/"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
-  </section>
+    <div class="copyright">
+      <p>&copy; Precioso Salon And Spa</p>
+    </div>
+  </footer>
 </body>
 
 </html>

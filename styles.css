@@ -388,6 +388,7 @@ header.scrolled {
 }
 
 
+
 .ImgSwiper {
   padding-top: 5px;
   background-size: cover;
@@ -528,6 +529,21 @@ header.scrolled {
   background-image: var(--custom-gradient);
 
 }
+
+
+
+
+/*++++++++++========================================Producs++++++++++======================================== */
+.pTitle{
+  display: block;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+
+
+
+
 
 /* _____________________________________________Contact Us ___________________________________________________________________*/
 

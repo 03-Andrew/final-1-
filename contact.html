@@ -64,20 +64,20 @@
       </div>
 
 
-      <form class="inputs_conatiner">
-        <div class="inputs">
-          <div class="left_side">
-            <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-            <input class="form-control" type="text" name="email" id="email" placeholder="Email">
-            <input class="form-control" type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number">
-          </div>
-          <div class="right_side">
-            <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"
-              required></textarea>
-          </div>
+      <form class="inputs_conatiner" onsubmit="event.preventDefault(); sendMail();">
+        <div class=" inputs">
+        <div class="left_side">
+          <input class="form-control" type="text" name="name" id="name" placeholder="Name">
+          <input class="form-control" type="email" name="email" id="email" placeholder="Email">
+          <input class="form-control" type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number">
         </div>
-        <button class="btn" type="submit" onclick="sendMail()">Submit</button>
-      </form>
+        <div class="right_side">
+          <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"
+            required></textarea>
+        </div>
+    </div>
+    <button class="btn" type="submit">Submit</button>
+    </form>
 
     </div>
   </section>
@@ -99,7 +99,8 @@
   </section>
 
   <div class="map_container">
-    <iframe class="map" src="https://www.google.com/maps/d/u/0/embed?mid=1F_zA5itedo7z63OZm-Kx4rfY-iJjvKE&ehbc=2E312F&noprof=1"></iframe>
+    <iframe class="map"
+      src="https://www.google.com/maps/d/u/0/embed?mid=1F_zA5itedo7z63OZm-Kx4rfY-iJjvKE&ehbc=2E312F&noprof=1"></iframe>
   </div>
   <footer>
     <div class="footer-container">

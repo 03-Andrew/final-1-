@@ -72,22 +72,22 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 function sendMail() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const phoneNumber = document.getElementById("phoneNumber").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-
-
-  const params = {name, email, phoneNumber, message,};
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phoneNumber = document.getElementById("phoneNumber").value;
+  const message = document.getElementById("message").value;
+  const params = { name, email, phoneNumber, message, };
 
   const serviceID = "service_goxdids";
   const templateID = "template_iea0qli";
 
-  // Send the email using emailjs
   emailjs.send(serviceID, templateID, params)
     .then(() => {
       alert("Email Sent Successfully!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phoneNumber").value = "";
+      document.getElementById("message").value = "";
     })
     .catch((error) => {
       console.error("Error sending email:", error);

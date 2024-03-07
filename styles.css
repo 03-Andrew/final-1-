@@ -736,12 +736,15 @@ textarea {
   object-fit: cover;
 }
 
-.map_container {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: -10px;
-}
-
+  .map_container {
+    width: 100%;
+    margin-bottom: -10px;
+  }
+  
+  .map {
+    width: 100%; /* Sets the width of the iframe to 100% of its parent (.map_container) */
+    height: 500px; /* Adjust the height as needed */
+  }
 @media screen and (max-width: 768px) {
 
   .facades {

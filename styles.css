@@ -534,10 +534,11 @@ header.scrolled {
 
 
 /*++++++++++========================================Producs++++++++++======================================== */
-.pTitle{
-  display: block;
-  max-width: 500px;
-  margin: 20px auto;
+.ProdTitle {
+  text-align: center;
+  padding-top: 30px;
+  color: var(--other_yellow);
+  font-size: 36px;
 }
 
 
@@ -604,6 +605,7 @@ form {
   flex-wrap: wrap;
   /* Allow inputs to wrap to the next line on smaller screens */
   gap: 10px;
+  margin-bottom: -60px;
 }
 
 .left_side,
@@ -622,7 +624,7 @@ form {
 }
 
 textarea {
-  height: 86%;
+  height: 65%;
 }
 
 .btn {
@@ -651,29 +653,23 @@ textarea {
 
   .btn {
     width: 100%;
-    /* Take full width on smaller screens */
     max-width: none;
-    /* Remove the max-width on the button */
   }
 
   .send h1 {
     font-size: 24px;
-    /* Adjust font size for smaller screens */
   }
 
   .sub_text ul {
     flex-direction: column;
-    /* Stack list items vertically on smaller screens */
   }
 
   .sub_text li {
     margin: 5px 0;
-    /* Adjust margin for list items on smaller screens */
   }
 
   .form_message {
     max-width: 100%;
-    /* Make the message take full width on smaller screens */
   }
 }
 
@@ -695,9 +691,6 @@ textarea {
 }
 
 .facade_container {
-
-  /* Two containers per row with some spacing */
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
@@ -732,7 +725,6 @@ textarea {
   content: '';
   display: block;
   padding-top: 75%;
-  /* Set the aspect ratio (height/width) for the container */
 }
 
 .img_container img {
@@ -755,15 +747,15 @@ textarea {
   .facades {
     display: flex;
     flex-direction: column;
-    /* Stack containers vertically */
     align-items: center;
-    /* Center the containers horizontally */
+  }
+
+  .btn {
+    margin-top: 60px;
   }
 
   .facade_container {
     flex: 0 0 90%;
-    /* Full width for one container per row on smaller screens */
-
   }
 
 }
@@ -884,7 +876,7 @@ textarea {
 /*_________________________________________________FOOTER_______________________________________________________-----*/
 
 footer {
-  background-color: rgba(233,233,233,255);
+  background-color: rgba(233, 233, 233, 255);
   color: #333;
   padding: 30px 0;
 }
@@ -933,15 +925,8 @@ p {
   text-align: center;
 }
 
-/* Media query for responsiveness */
 @media screen and (max-width: 768px) {
   .fDiv {
     width: 100%;
   }
 }
-
-
-/* 
-.logo {
-  width: 7%;
-} */

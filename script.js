@@ -72,19 +72,30 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phoneNumber: document.getElementById("phoneNumber").value,
-    message: document.getElementById("message").value
-  }
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phoneNumber = document.getElementById("phoneNumber").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+
+
+  const params = {name, email, phoneNumber, message,};
+
   const serviceID = "service_goxdids";
   const templateID = "template_iea0qli";
 
+  // Send the email using emailjs
   emailjs.send(serviceID, templateID, params)
-    .then(alert("Email Sent!!"))
+    .then(() => {
+      alert("Email Sent Successfully!");
+    })
+    .catch((error) => {
+      console.error("Error sending email:", error);
+      alert(
+        "There was an error sending your email. Please try again later."
+      );
+    });
 }
-
 
 function addToCart() {
   var service = document.getElementById("services").value;

@@ -8,52 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
   <style>
-    .products {
-      max-width: 800px;
-      /* Set maximum width */
-      margin: 0 auto;
-      /* Center the container */
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
 
-    .product-card {
-      width: calc(50% - 10px);
-      /* Two items per row with a gap of 20px */
-      margin-bottom: 20px;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-      /* Increase size on hover */
-    }
-
-    .product-img {
-      width: 100%;
-      height: auto;
-    }
-
-    .product-info {
-      background-color: #f9f9f9;
-      padding: 10px;
-      border-radius: 10px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .product-card:hover .product-info {
-      background-color: #e0e0e0;
-      /* Change background color on hover */
-    }
-
-    @media (max-width: 768px) {
-      .product-card {
-        width: 100%;
-        /* On smaller screens, display one item per row */
-      }
-    }
   </style>
 </head>
 
@@ -84,10 +39,12 @@
     </nav>
   </header>
 
+  <!--Products Sold-->
   <section>
     <div class="ProdTitle">
       <h1>What we offer</h1>
     </div>
+    <!--Contents for products-->
     <div class="card_container">
       <div class="card">
         <img src="assets/Products/Cream1.png" alt="Image 1">

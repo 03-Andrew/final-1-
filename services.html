@@ -10,88 +10,9 @@
   <link rel="stylesheet" href="dist/accordion.min.css">
   <script src="dist/accordion.min.js"></script>
   <script src="script.js"></script>
-  <style>
-    h2 {
-      color: #282F35;
-      font-family: 'Josefin Sans', Arial, sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    .container {
-      max-width: 1500px;
-      margin: 0 auto;
-      padding-bottom: 50px;
-    }
-
-    .acc {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .acc li {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .acc_ctrl {
-      background: #fffffd;
-      border: none;
-      cursor: pointer;
-      display: block;
-      outline: none;
-      padding: 2em;
-      position: relative;
-      text-align: center;
-      width: 95%;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      border-radius: 20px;
-      margin: 0 auto;
-      margin-bottom: 5px;
-      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .acc_ctrl:hover {
-      background: #e6e6e6;
-    }
-
-    .acc_ctrl.active h2,
-    .acc_ctrl:focus h2 {
-      position: relative;
-    }
-
-    .acc_panel {
-      background: transparent;
-      display: none;
-      overflow: hidden;
-    }
-
-    .acc_panel.active {
-      display: block;
-      animation: fadein 0.5s;
-    }
-
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    body {
-      background: linear-gradient(to bottom, rgb(251, 246, 242), #fff);
-    }
-  </style>
-
 </head>
 
-<body>
+<body class="Services">
   <header>
     <div class="logo_container">
       <h1>Precioso Spa</h1>
@@ -117,10 +38,13 @@
       </ul>
     </nav>
   </header>
+
+  <!--Accordion Drop Down Container-->
   <section class="accordion">
     <div class="title" style="margin-bottom: 10px;">
       <h1>What we offer</h1>
     </div>
+    <!--Contents of the accordion drop down-->
     <div class="container">
       <ul class="acc">
         <li>
@@ -479,6 +403,8 @@
 
       </ul>
     </div>
+
+    <!--Script for the accordion-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script>
       $(function () {

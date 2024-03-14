@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function () {
   var header = document.querySelector('header');
-  var scrolled = window.scrollY > 50; // Adjust the scroll position as needed
+  var scrolled = window.scrollY > 50; 
   header.classList.toggle('scrolled', scrolled);
 });
 
@@ -13,28 +13,10 @@ function hideSidebar() {
   sidebar.style.display = 'none'
 }
 
-/* Accordion */
-document.addEventListener("DOMContentLoaded", function () {
-  const accordionItems = document.querySelectorAll(".accordion-item");
 
-  accordionItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      // Check if the clicked item is already active
-      const isActive = this.classList.contains("active");
 
-      // Remove "active" class from all accordion items
-      accordionItems.forEach(function (item) {
-        item.classList.remove("active");
-      });
 
-      // Toggle "active" class on the clicked accordion item only if it's not already active
-      if (!isActive) {
-        this.classList.toggle("active");
-      }
-    });
-  });
-});
-
+/* Paralax */
 document.addEventListener('DOMContentLoaded', function () {
   var parallaxSections = document.querySelectorAll('.parallax');
 
@@ -49,28 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', updateParallax);
   window.addEventListener('resize', updateParallax);
-
-  // Initial call to set initial background positions
   updateParallax();
 });
 
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.6,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
-  spaceBetween: 15,
-  speed: 1500,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
+/* Send Contact Forms Email */
 function sendMail() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -97,6 +62,8 @@ function sendMail() {
     });
 }
 
+
+/* Add to Cart Function */
 function addToCart() {
   var service = document.getElementById("services").value;
   var cartItems = document.getElementById("cartItems");
@@ -116,11 +83,14 @@ function addToCart() {
   cartItems.appendChild(item);
 }
 
+
+/* Clear Cart */
 function clearCart() {
   var cartItems = document.getElementById("cartItems");
   cartItems.innerHTML = "";
 }
 
+/* Send Booking */
 function sendBookingEmail() {
   var name = document.getElementById('name').value;
   var contactNumber = document.getElementById('contactNumber').value;

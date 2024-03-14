@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8fc48bcaca.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
 </head>
 
 <body class="home">
+    <!--Header-->
     <header>
         <div class="logo_container">
             <h1>Precioso Spa</h1>
@@ -40,6 +38,8 @@
             </ul>
         </nav>
     </header>
+
+    <!--Hero-->
     <section class="hero parallax">
         <div class="top_title">
             <h1>Precioso Salon and Spa</h1>
@@ -49,6 +49,8 @@
             </div>
         </div>
     </section>
+
+    <!--What we offer Section-->
     <section class="services parallax">
         <div class="services_container">
             <div class="title_container">
@@ -111,6 +113,8 @@
                 with precision and
                 care.</p>
         </div>
+
+        <!--Image Swipers-->
         <div class="img-slider">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -140,6 +144,7 @@
             </div>
         </div>
 
+        <!--Script For Swiper-->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             var swiper = new Swiper(".mySwiper", {
@@ -162,7 +167,6 @@
             swiper.update();
             });
             function calculateSlidesPerView() {
-                // Adjust this function based on your responsive needs
                 if (window.innerWidth < 780) {
                     return 1;
                 } else if (window.innerWidth < 1200) {
